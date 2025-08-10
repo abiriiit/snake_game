@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Snake Game 🐍</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="theme-toggle">
+        <button id="themeToggle" aria-label="Toggle theme">
+            <span class="sun-icon">☀️</span>
+            <span class="moon-icon">🌙</span>
+        </button>
+    </div>
+
+    <div class="game-container">
+        <h1>🐍 Snake Game</h1>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-label">Score</span>
+                <span id="score" class="stat-value">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">High Score</span>
+                <span id="highScore" class="stat-value">0</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="gameSpeed">Speed:</label>
+                <input type="range" id="gameSpeed" min="1" max="10" value="5" step="1">
+                <span id="speedValue">5</span>
+            </div>
+            
+            <button id="gameStart" class="game-btn">
+                <span class="btn-text">Start Game</span>
+                <span class="btn-icon">🎮</span>
+            </button>
+            
+            <button id="pauseBtn" class="game-btn secondary" disabled>
+                <span class="btn-text">Pause</span>
+                <span class="btn-icon">⏸️</span>
+            </button>
+
+            <button id="restartBtn" class="game-btn danger">
+                <span class="btn-text">Restart</span>
+                <span class="btn-icon">🔄</span>
+            </button>
+        </div>
+
+        <div class="game-area-container">
+            <canvas id="gameArea"></canvas>
+            <div id="gameOverlay" class="game-overlay hidden">
+                <div class="overlay-content">
+                    <h2 id="overlayTitle">Game Over!</h2>
+                    <p id="overlayMessage">Your Score: <span id="finalScore">0</span></p>
+                    <button id="overlayRestartBtn" class="game-btn">
+                        <span class="btn-text">Play Again</span>
+                        <span class="btn-icon">🔄</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- On-Screen Directional Controls -->
+        <div class="direction-controls">
+            <div class="direction-row">
+                <button id="upBtn" class="direction-btn" data-direction="up">
+                    <span>↑</span>
+                </button>
+            </div>
+            <div class="direction-row">
+                <button id="leftBtn" class="direction-btn" data-direction="left">
+                    <span>←</span>
+                </button>
+                <button id="downBtn" class="direction-btn" data-direction="down">
+                    <span>↓</span>
+                </button>
+                <button id="rightBtn" class="direction-btn" data-direction="right">
+                    <span>→</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h3>How to Play</h3>
+            <div class="instruction-grid">
+                <div class="instruction-item">
+                    <span class="key">↑ ↓ ← →</span>
+                    <span>Arrow keys or buttons to move</span>
+                </div>
+                <div class="instruction-item">
+                    <span class="key">PAUSE</span>
+                    <span>Pause/Resume button</span>
+                </div>
+                <div class="instruction-item">
+                    <span class="key">RESTART</span>
+                    <span>Restart button</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="particles"></div>
+    
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
