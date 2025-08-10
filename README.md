@@ -15,20 +15,9 @@
 
 #### Steps to Use:
 
----
-
-- Download or clone the repository
-
-```
-git clone https://github.com/Ayushparikh-code/Web-dev-mini-projects.git
-```
-
 - Go to the directory
 - Run the index.html file
 - Start Playing!!
-
-<h3> ScreenShots </h3> 
-<img width="960" alt="Snake-Game" src="https://user-images.githubusercontent.com/64218887/124417994-0edb5000-dd78-11eb-9e4a-e0d651ee0f32.png">
 
 <br>
 
