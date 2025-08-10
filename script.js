@@ -441,7 +441,7 @@ app.get('/health', (req, res) => {
 });
 
 // Game state endpoint
-app.get('/api/game-state', (req, res) => {
+app.get('game-state', (req, res) => {
     res.json({
         message: 'Snake Game MCP Server is running',
         capabilities: [
